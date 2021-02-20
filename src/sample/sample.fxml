@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane id="doctorPane" fx:id="doctorPane" layoutX="10.0" layoutY="92.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="clinicaPane" fx:id="clinicaPane" layoutY="84.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="topPane" fx:id="topPane" layoutX="1.0" layoutY="-76.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="318.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView id="logo" fitHeight="64.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@icons/logo.png" />
+               </image>
+            </ImageView>
+            <HBox id="icons" alignment="CENTER" prefHeight="45.0" prefWidth="382.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="17.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="40.0" onMouseClicked="#botonDoctorApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconRegistroMedico.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" prefWidth="10.0" visible="false" />
+                  <ImageView id="Clinica" fitHeight="41.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#botonClinicaApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconRegistroClinica.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="47.0" layoutY="10.0" onMouseClicked="#botonPadecimientosApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconRegistroPadecimientos.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="84.0" layoutY="10.0" onMouseClicked="#botonPacienteApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconRegistroPaciente.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="121.0" layoutY="10.0" onMouseClicked="#botonCitasApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconRegistroCita.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" onMouseClicked="#botonBusquedasApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconBusqueda.png" />
+                     </image>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="195.0" layoutY="10.0" onMouseClicked="#botonCorreoApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconCorreo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="232.0" layoutY="10.0" onMouseClicked="#botonReviewApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/iconPuntuacion.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <ImageView fitHeight="41.0" fitWidth="30.0" onMouseClicked="#botonAgregarApretado" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-add-list-90.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Rectangle id="greyBar" arcHeight="5.0" arcWidth="5.0" fill="#5b5b5b" height="9.0" stroke="BLACK" strokeType="INSIDE" width="619.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0" />
+            <HBox id="arrows" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="355.0" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+               <children>
+                  <ImageView id="doctorArrow" fx:id="doctorArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="1.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" valignment="BOTTOM" visible="false" />
+                  <ImageView id="clinicaArrow" fx:id="clinicaArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="padecimientosArrow" fx:id="padecimientosArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="pacienteArrow" fx:id="pacienteArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="citasArrow" fx:id="citasArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="busquedasArrow" fx:id="busquedasArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="correoArrow" fx:id="correoArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="reviewArrow" fx:id="reviewArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
+                  <ImageView id="agregarArrow" fx:id="agregarArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@icons/flecha.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="padecimientoPane" fx:id="padecimientoPane" layoutX="10.0" layoutY="92.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="pacientePane" fx:id="pacientePane" layoutX="20.0" layoutY="102.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="citasPane" fx:id="citasPane" layoutX="10.0" layoutY="92.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="busquedasPane" fx:id="busquedasPane" layoutX="20.0" layoutY="102.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="correoPane" fx:id="correoPane" layoutX="30.0" layoutY="112.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="reviewPane" fx:id="reviewPane" layoutX="40.0" layoutY="122.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane id="agregarPane" fx:id="agregarPane" layoutX="50.0" layoutY="132.0" prefHeight="355.0" prefWidth="619.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+   </children>
+</AnchorPane>
