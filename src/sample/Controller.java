@@ -261,7 +261,7 @@ public class Controller {
         }
 
         public void botonAgregarApretado (MouseEvent event){
-            // llevo como media hora en esto y este comentario es el unico que no puedo copiar y pegar
+            // llevo como 1 hora en esto y este comentario es el unico que no es eficiente copiar y pegar
             agregarPane.setVisible(true);
             agregarArrow.setVisible(true);
 

@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane id="mainPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane id="doctorPane" fx:id="doctorPane" layoutX="10.0" layoutY="92.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="clinicaPane" fx:id="clinicaPane" layoutY="84.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="topPane" fx:id="topPane" layoutX="1.0" layoutY="-76.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="318.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="topPane" fx:id="topPane" prefHeight="79.0" prefWidth="900.0" style="-fx-background-color: #c0c0c0;" AnchorPane.bottomAnchor="421.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView id="logo" fitHeight="64.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="5.0">
+            <ImageView id="logo" fitHeight="67.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="5.0">
                <image>
                   <Image url="@icons/logo.png" />
                </image>
             </ImageView>
-            <HBox id="icons" alignment="CENTER" prefHeight="45.0" prefWidth="382.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="17.0">
+            <HBox id="icons" alignment="CENTER" layoutX="245.0" prefHeight="59.0" prefWidth="652.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="17.0">
                <children>
-                  <ImageView fitHeight="41.0" fitWidth="40.0" onMouseClicked="#botonDoctorApretado" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="55.0" fitWidth="57.0" onMouseClicked="#botonDoctorApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconRegistroMedico.png" />
                      </image>
@@ -29,8 +36,8 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator maxWidth="-Infinity" prefWidth="10.0" visible="false" />
-                  <ImageView id="Clinica" fitHeight="41.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#botonClinicaApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView id="Clinica" fitHeight="61.0" fitWidth="47.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#botonClinicaApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconRegistroClinica.png" />
                      </image>
@@ -38,8 +45,8 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="47.0" layoutY="10.0" onMouseClicked="#botonPadecimientosApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="55.0" fitWidth="47.0" layoutX="47.0" layoutY="10.0" onMouseClicked="#botonPadecimientosApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconRegistroPadecimientos.png" />
                      </image>
@@ -47,8 +54,8 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="84.0" layoutY="10.0" onMouseClicked="#botonPacienteApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="84.0" layoutY="10.0" onMouseClicked="#botonPacienteApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconRegistroPaciente.png" />
                      </image>
@@ -56,8 +63,8 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="121.0" layoutY="10.0" onMouseClicked="#botonCitasApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="51.0" fitWidth="48.0" layoutX="121.0" layoutY="10.0" onMouseClicked="#botonCitasApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconRegistroCita.png" />
                      </image>
@@ -65,14 +72,14 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" onMouseClicked="#botonBusquedasApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="53.0" fitWidth="49.0" onMouseClicked="#botonBusquedasApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconBusqueda.png" />
                      </image>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="195.0" layoutY="10.0" onMouseClicked="#botonCorreoApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="57.0" fitWidth="70.0" layoutX="195.0" layoutY="10.0" onMouseClicked="#botonCorreoApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconCorreo.png" />
                      </image>
@@ -80,8 +87,8 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="232.0" layoutY="10.0" onMouseClicked="#botonReviewApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="52.0" fitWidth="50.0" layoutX="232.0" layoutY="10.0" onMouseClicked="#botonReviewApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/iconPuntuacion.png" />
                      </image>
@@ -89,83 +96,1511 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <Separator prefWidth="10.0" visible="false" />
-                  <ImageView fitHeight="41.0" fitWidth="30.0" onMouseClicked="#botonAgregarApretado" pickOnBounds="true" preserveRatio="true">
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="51.0" fitWidth="67.0" onMouseClicked="#botonAgregarApretado" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/icons8-add-list-90.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <Rectangle id="greyBar" arcHeight="5.0" arcWidth="5.0" fill="#5b5b5b" height="9.0" stroke="BLACK" strokeType="INSIDE" width="619.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0" />
-            <HBox id="arrows" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="355.0" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
-               <children>
-                  <ImageView id="doctorArrow" fx:id="doctorArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets right="1.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" valignment="BOTTOM" visible="false" />
-                  <ImageView id="clinicaArrow" fx:id="clinicaArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="padecimientosArrow" fx:id="padecimientosArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="pacienteArrow" fx:id="pacienteArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="citasArrow" fx:id="citasArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="busquedasArrow" fx:id="busquedasArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="correoArrow" fx:id="correoArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="reviewArrow" fx:id="reviewArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
-                     </image>
-                  </ImageView>
-                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" visible="false" />
-                  <ImageView id="agregarArrow" fx:id="agregarArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@icons/flecha.png" />
+                        <Image url="@icons/iconSalir.png" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
          </children>
       </AnchorPane>
-      <AnchorPane id="padecimientoPane" fx:id="padecimientoPane" layoutX="10.0" layoutY="92.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="pacientePane" fx:id="pacientePane" layoutX="20.0" layoutY="102.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="citasPane" fx:id="citasPane" layoutX="10.0" layoutY="92.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="busquedasPane" fx:id="busquedasPane" layoutX="20.0" layoutY="102.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="correoPane" fx:id="correoPane" layoutX="30.0" layoutY="112.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
-      <AnchorPane id="reviewPane" fx:id="reviewPane" layoutX="40.0" layoutY="122.0" prefHeight="316.0" prefWidth="610.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane id="agregarPane" fx:id="agregarPane" layoutX="50.0" layoutY="132.0" prefHeight="355.0" prefWidth="619.0" style="-fx-background-color: #a7a7a9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane id="correoPane" fx:id="correoPane" layoutY="97.0" prefHeight="426.0" prefWidth="900.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="-23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutY="5.0" text="Registro Médico" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="204.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="77.0" layoutY="201.0" prefHeight="25.0" prefWidth="259.0" />
+            <Label layoutX="9.0" layoutY="254.0" text="Cédula:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="62.0" layoutY="252.0" prefHeight="25.0" prefWidth="274.0" />
+            <Label layoutX="7.0" layoutY="297.0" text="Correo electrónico:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="126.0" layoutY="295.0" prefHeight="25.0" prefWidth="210.0" />
+            <Label layoutX="9.0" layoutY="341.0" text="Especialidad:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="94.0" layoutY="338.0" prefHeight="25.0" prefWidth="242.0" promptText="--Seleccione--" style="-fx-background-color: #ffffff;" visibleRowCount="8" />
+            <Label layoutX="5.0" layoutY="385.0" prefHeight="17.0" prefWidth="68.0" text="Eslogan:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="62.0" layoutY="385.0" prefHeight="25.0" prefWidth="274.0" />
+            <Label layoutX="356.0" layoutY="176.0" prefHeight="20.0" prefWidth="210.0" text="Centro médico donde trabaja:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="356.0" layoutY="97.0" prefHeight="25.0" prefWidth="306.0" promptText="--Seleccione--" style="-fx-background-color: #ffffff;" visibleRowCount="8" />
+            <Label layoutX="356.0" layoutY="25.0" prefHeight="27.0" prefWidth="224.0" text="Procedimientos que realiza:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="356.0" layoutY="66.0" prefHeight="17.0" prefWidth="177.0" text="Nombre del procedimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="355.0" layoutY="141.0" prefHeight="17.0" prefWidth="68.0" text="Costo:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="400.0" layoutY="139.0" prefHeight="25.0" prefWidth="259.0" />
+            <ComboBox layoutX="356.0" layoutY="212.0" prefHeight="25.0" prefWidth="306.0" promptText="--Seleccione--" style="-fx-background-color: #ffffff;" visibleRowCount="8" />
+            <CheckBox layoutX="369.0" layoutY="289.0" mnemonicParsing="false" text="Español" textFill="WHITE" />
+            <Label layoutX="362.0" layoutY="256.0" prefHeight="17.0" prefWidth="187.0" text="Idiomas que habla el médico:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="469.0" layoutY="289.0" mnemonicParsing="false" text="Inglés" textFill="WHITE" />
+            <CheckBox layoutX="370.0" layoutY="333.0" mnemonicParsing="false" text="Francés" textFill="WHITE" />
+            <CheckBox layoutX="566.0" layoutY="289.0" mnemonicParsing="false" text="Mandarín " textFill="WHITE" />
+            <CheckBox layoutX="468.0" layoutY="333.0" mnemonicParsing="false" text="Portuguez" textFill="WHITE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/flecha.png" />
+               </image>
+            </ImageView>
+            <CheckBox layoutX="566.0" layoutY="333.0" mnemonicParsing="false" text="Alemán" textFill="WHITE" />
+            <CheckBox layoutX="370.0" layoutY="377.0" mnemonicParsing="false" text="Ruso" textFill="WHITE" />
+            <CheckBox layoutX="468.0" layoutY="377.0" mnemonicParsing="false" text="Italiano" textFill="WHITE" />
+            <CheckBox layoutX="566.0" layoutY="377.0" mnemonicParsing="false" text="Otros" textFill="WHITE" />
+            <Label layoutX="672.0" layoutY="29.0" prefHeight="27.0" prefWidth="101.0" text="Educación:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="672.0" layoutY="66.0" prefHeight="17.0" prefWidth="68.0" text="Título:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="714.0" layoutY="64.0" prefHeight="25.0" prefWidth="267.0" />
+            <Label layoutX="672.0" layoutY="100.0" prefHeight="20.0" prefWidth="168.0" text="Universidad de estudio:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="672.0" layoutY="127.0" prefHeight="25.0" prefWidth="306.0" promptText="--Seleccione--" style="-fx-background-color: #ffffff;" visibleRowCount="8" />
+            <Label layoutX="672.0" layoutY="166.0" prefHeight="20.0" prefWidth="168.0" text="País de la universidad:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="672.0" layoutY="189.0" prefHeight="25.0" prefWidth="306.0" promptText="--Seleccione--" style="-fx-background-color: #ffffff;" visibleRowCount="8" />
+            <Label layoutX="672.0" layoutY="237.0" prefHeight="20.0" prefWidth="242.0" text="Mes y año de finalización del estudio:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="672.0" layoutY="265.0" prefHeight="25.0" prefWidth="306.0" />
+            <Label layoutX="672.0" layoutY="303.0" prefHeight="20.0" prefWidth="242.0" text="Afiliaciones:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="672.0" layoutY="340.0" prefHeight="20.0" prefWidth="242.0" text="Nombre de la afiliación:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="672.0" layoutY="364.0" prefHeight="25.0" prefWidth="306.0" promptText="--Seleccione--" style="-fx-background-color: #ffffff;" visibleRowCount="8" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane1" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="981.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Registro de Clínicas" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="267.0" text="Nombre de la clínica:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="36.0" layoutY="300.0" prefHeight="25.0" prefWidth="306.0" />
+            <Label layoutX="435.0" layoutY="28.0" text="Dirección" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="424.0" layoutY="88.0" text="Dirección general:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="548.0" layoutY="72.0" prefHeight="51.0" prefWidth="336.0" />
+            <Label layoutX="424.0" layoutY="156.0" text="Distrito:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="478.0" layoutY="154.0" prefHeight="25.0" prefWidth="407.0" />
+            <Label layoutX="426.0" layoutY="227.0" text="Cantón" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="478.0" layoutY="224.0" prefHeight="25.0" prefWidth="407.0" />
+            <Label layoutX="426.0" layoutY="280.0" text="Provincia" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="488.0" layoutY="275.0" prefHeight="25.0" prefWidth="397.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/flecha.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane2" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="981.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Registro de Padecimientos" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="162.0" text="Tipo de padecimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="20.0" layoutY="202.0" prefHeight="85.0" prefWidth="428.0" />
+            <Label layoutX="491.0" layoutY="115.0" text="Descripción del padecimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="491.0" layoutY="159.0" prefHeight="85.0" prefWidth="428.0" />
+            <Label layoutX="22.0" layoutY="66.0" text="Nombre del padecimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="20.0" layoutY="95.0" prefHeight="30.0" prefWidth="407.0" />
+         </children></AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane3" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="981.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Registro de Paciente" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="221.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/flecha.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="76.0" layoutY="219.0" prefHeight="25.0" prefWidth="306.0" />
+            <Label layoutX="14.0" layoutY="267.0" text="Cédula:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="68.0" layoutY="264.0" prefHeight="25.0" prefWidth="314.0" />
+            <Label layoutX="14.0" layoutY="301.0" text="Correo electrónico:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="14.0" layoutY="333.0" prefHeight="25.0" prefWidth="367.0" />
+            <Label layoutX="463.0" layoutY="42.0" text="Padecimientos" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="463.0" layoutY="86.0" text="Tipo del padecimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="471.0" layoutY="115.0" prefHeight="25.0" prefWidth="336.0" promptText="--Seleccione--" />
+            <Label layoutX="463.0" layoutY="165.0" text="Nombre del padecimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="471.0" layoutY="202.0" prefHeight="25.0" prefWidth="336.0" promptText="--Seleccione--" />
+            <ComboBox layoutX="471.0" layoutY="289.0" prefHeight="25.0" prefWidth="336.0" promptText="--Seleccione--" />
+            <Label layoutX="463.0" layoutY="254.0" text="Descripción del padecimiento:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane4" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="981.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutX="22.0" layoutY="42.0" prefHeight="39.0" prefWidth="150.0" text="Registro de Cita" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="14.0" layoutY="182.0" prefHeight="207.0" prefWidth="665.0" style="-fx-background-color: #a2a7b0;">
+               <children>
+                  <HBox prefHeight="207.0" prefWidth="693.0">
+                     <children>
+                        <Separator prefHeight="21.0" prefWidth="54.0" visible="false" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="2:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="7:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="9:00am">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="3:30p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="7:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="9:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="11:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="2:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="2:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="2:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="7:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="3:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="10.0" layoutY="47.0" prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="6:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="1:00pm">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="4:30p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:30p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Separator prefHeight="3.0" prefWidth="54.0" visible="false" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="207.0" prefWidth="693.0" visible="false">
+                     <children>
+                        <Separator prefHeight="5.0" prefWidth="33.0" visible="false" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="7:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="9:00am">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="7:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="2:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:00m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="2:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="12:45m.d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="4:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:45p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="7:00a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="--------">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="3:15p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="10.0" layoutY="47.0" prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="6:00p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="8:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="10:30a.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="1:00pm">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="4:30p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <Label text="5:30p.m">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Separator prefHeight="4.0" prefWidth="33.0" visible="false" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="109.0" prefHeight="66.0" prefWidth="693.0" style="-fx-background-color: #a2a7b0;">
+               <children>
+                  <HBox layoutX="-1.0" prefHeight="66.0" prefWidth="693.0">
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconArrowI.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="19.0" />
+                           </HBox.margin></ImageView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="68.0" prefWidth="77.0" text="Viernes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="19/02/2021">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="66.0" prefWidth="92.0" text="Sábado">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="20/02/2021">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="312.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="73.0" prefWidth="94.0" text="Domingo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="21/02/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="164.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="92.0" text="Lunes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="4.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="69.0" prefWidth="98.0" text="22/02/2021">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="192.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="94.0" text="Martes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="93.0" text="23/02/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="220.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="95.0" text="Miércoles">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="24/02/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="36.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="95.0" text="Jueves">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="25/02/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="276.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="44.0" prefWidth="95.0" text="Viernes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="26/02/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="248.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconArrayD.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets top="19.0" />
+                           </HBox.margin></ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="108.0" prefHeight="67.0" prefWidth="693.0" style="-fx-background-color: #a2a7b0;" visible="false" AnchorPane.bottomAnchor="228.0">
+               <children>
+                  <HBox layoutX="-1.0" prefHeight="66.0" prefWidth="693.0">
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconArrowI.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="19.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="68.0" prefWidth="77.0" text="Sábado">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="27/02/2021">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="66.0" prefWidth="92.0" text="Domingo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="28/02/2021">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="312.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="73.0" prefWidth="94.0" text="Lunes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="01/03/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="164.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="92.0" text="Martes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="4.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="69.0" prefWidth="98.0" text="02/03/2021">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="192.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="94.0" text="Miércoles">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="93.0" text="03/03/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="220.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="95.0" text="Jueves">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="04/03/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="36.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="95.0" text="Viernes">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="05/03/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="276.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="44.0" prefWidth="95.0" text="Sábado">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="06/03/2021">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="248.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconArrayD.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets top="19.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <Label layoutX="735.0" layoutY="109.0" text="Seleccione un Médico" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="735.0" layoutY="167.0" text="Seleccione la clínica" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="735.0" layoutY="225.0" text="Cita la razón de su consulta" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="735.0" layoutY="302.0" text="--En este espacio puede dejarle una nota al médico--" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="870.0" layoutY="129.0" prefHeight="25.0" prefWidth="187.0" promptText="--Seleccione--" />
+            <ComboBox layoutX="857.0" layoutY="182.0" prefHeight="25.0" prefWidth="199.0" promptText="--Seleccione--" />
+            <TextField layoutX="735.0" layoutY="245.0" prefHeight="59.0" prefWidth="322.0" />
+            <TextField layoutX="735.0" layoutY="322.0" prefHeight="59.0" prefWidth="322.0" />
+         </children></AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane5" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="1063.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Búsquedas" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="50.0" text="Médicos" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="25.0" layoutY="160.0" prefHeight="29.0" prefWidth="199.0" promptText="-Seleccione al Médico-" />
+            <CheckBox layoutX="25.0" layoutY="87.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Nombre" />
+            <CheckBox layoutX="143.0" layoutY="87.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Apellido" />
+            <CheckBox layoutX="72.0" layoutY="124.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Procedimiento" />
+            <ListView layoutX="25.0" layoutY="189.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #454545;" />
+            <Separator layoutX="267.0" layoutY="50.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="6.0" />
+            <Label layoutX="291.0" layoutY="50.0" text="Clínicas" textFill="#454545">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="291.0" layoutY="99.0" prefHeight="29.0" prefWidth="199.0" promptText="-Seleccione la Provincia-" />
+            <ListView layoutX="291.0" layoutY="128.0" prefHeight="267.0" prefWidth="200.0" style="-fx-background-color: #3e3c3c;" />
+            <Separator layoutX="518.0" layoutY="50.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="6.0" />
+            <Label layoutX="549.0" layoutY="50.0" text="Procedimientos" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="549.0" layoutY="123.0" prefHeight="29.0" prefWidth="199.0" promptText="-Seleccione el procedimiento-" />
+            <CheckBox layoutX="549.0" layoutY="87.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Costo" />
+            <CheckBox layoutX="659.0" layoutY="87.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Médico" />
+            <ListView layoutX="549.0" layoutY="152.0" prefHeight="228.0" prefWidth="200.0" style="-fx-background-color: #3e3c3c;" />
+            <Separator layoutX="782.0" layoutY="50.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="6.0" />
+            <Label layoutX="812.0" layoutY="50.0" text="Pacientes" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="816.0" layoutY="86.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Nombre" />
+            <CheckBox layoutX="932.0" layoutY="86.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Apellido" />
+            <CheckBox layoutX="871.0" layoutY="124.0" mnemonicParsing="false" style="-fx-background-color: #a59f9f;" text="Por Cédula" />
+            <ComboBox layoutX="812.0" layoutY="160.0" prefHeight="29.0" prefWidth="199.0" promptText="-Seleccione el paciente-" />
+            <ListView layoutX="812.0" layoutY="189.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3e3c3c;" />
+         </children></AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane6" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="1063.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Envío de correos electrónicos" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="532.0" layoutY="14.0" text="Envío de correos electrónicos automático" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="518.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="6.0" />
+            <AnchorPane layoutX="14.0" layoutY="40.0" prefHeight="340.0" prefWidth="480.0" style="-fx-background-color: #d0c8c8;">
+               <children>
+                  <ButtonBar prefHeight="85.0" prefWidth="480.0">
+                    <buttons>
+                        <VBox prefHeight="85.0" prefWidth="310.0">
+                           <children>
+                              <Label text="De:" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField style="-fx-background-color: #ffffff;" />
+                              <Label prefHeight="26.0" prefWidth="278.0" text="Para:" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="10.0" layoutY="114.0" style="-fx-background-color: #ffffff;" />
+                              <Label layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="278.0" text="Asunto:" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="10.0" layoutY="36.0" style="-fx-background-color: #ffffff;" />
+                           </children>
+                        </VBox>
+                      <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="48.0" text="Enviar" textAlignment="CENTER" />
+                    </buttons>
+                  </ButtonBar>
+                  <Separator layoutX="4.0" layoutY="154.0" prefHeight="4.0" prefWidth="473.0" />
+                  <TextField layoutX="14.0" layoutY="170.0" prefHeight="156.0" prefWidth="452.0" style="-fx-background-color: #ffff;" />
+               </children>
+            </AnchorPane>
+            <ComboBox layoutX="532.0" layoutY="55.0" prefWidth="150.0" promptText="Hora de envío" />
+            <AnchorPane layoutX="532.0" layoutY="113.0" prefHeight="267.0" prefWidth="480.0" style="-fx-background-color: #d0c8c8;">
+               <children>
+                  <ButtonBar prefHeight="85.0" prefWidth="480.0">
+                     <buttons>
+                        <VBox prefHeight="85.0" prefWidth="310.0">
+                           <children>
+                              <Label text="De:" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField style="-fx-background-color: #ffffff;" />
+                              <Label prefHeight="26.0" prefWidth="278.0" text="Para:" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="10.0" layoutY="114.0" style="-fx-background-color: #ffffff;" />
+                              <Label layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="278.0" text="Asunto:" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="10.0" layoutY="36.0" style="-fx-background-color: #ffffff;" />
+                           </children>
+                        </VBox>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="48.0" text="Enviar" textAlignment="CENTER" />
+                     </buttons>
+                  </ButtonBar>
+                  <Separator layoutX="4.0" layoutY="154.0" prefHeight="4.0" prefWidth="473.0" />
+                  <TextField layoutX="14.0" layoutY="170.0" prefHeight="85.0" prefWidth="452.0" style="-fx-background-color: #ffff;" />
+               </children>
+            </AnchorPane>
+            <ComboBox layoutX="772.0" layoutY="55.0" prefWidth="150.0" promptText="Periodo" />
+         </children></AnchorPane>
+      <AnchorPane id="correoPane" fx:id="correoPane7" layoutX="10.0" layoutY="97.0" prefHeight="403.0" prefWidth="1063.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <ComboBox accessibleText="hola" layoutX="20.0" layoutY="55.0" prefWidth="150.0" promptText="Seleccione un médico" />
+            <Label layoutX="20.0" layoutY="14.0" text="Puntuación" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="20.0" layoutY="106.0" prefHeight="267.0" prefWidth="693.0" style="-fx-background-color: #b7b1b1;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="661.0" text="Seleccione la cantidad de estrellas en donde 1 estrella (como una atención pobre)" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="41.0" prefHeight="27.0" prefWidth="661.0" text=" hasta 5 estrellas (como una atenciónexcelente) y deje un comentario." textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="84.0" layoutY="78.0" prefHeight="41.0" prefWidth="480.0">
+                     <children>
+                        <Separator prefWidth="200.0" visible="false" />
+                        <ImageView fitHeight="41.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconPuntuacion.png" />
+                           </image>
+                        </ImageView>
+                        <Separator prefWidth="200.0" visible="false" />
+                        <ImageView fitHeight="39.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconPuntuacion.png" />
+                           </image>
+                        </ImageView>
+                        <Separator prefWidth="200.0" visible="false" />
+                        <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconPuntuacion.png" />
+                           </image>
+                        </ImageView>
+                        <Separator prefWidth="200.0" visible="false" />
+                        <ImageView fitHeight="55.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconPuntuacion.png" />
+                           </image>
+                        </ImageView>
+                        <Separator prefWidth="200.0" visible="false" />
+                        <ImageView fitHeight="53.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/iconPuntuacion.png" />
+                           </image>
+                        </ImageView>
+                        <Separator prefWidth="200.0" visible="false" />
+                     </children>
+                  </HBox>
+                  <Separator layoutY="67.0" prefHeight="4.0" prefWidth="701.0" />
+                  <TextField layoutX="21.0" layoutY="134.0" prefHeight="111.0" prefWidth="661.0" style="-fx-background-color: #ffffff;" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="856.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="780.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="706.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="635.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="406.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="336.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="482.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="548.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="258.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="395.0" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="612.0" AnchorPane.topAnchor="75.0">
+         <image>
+            <Image url="@icons/flecha.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -21,4 +21,28 @@ public class Clinica {
                 "Direccion: " + direccion +
                 "Image: " + image + '\n';
     }
+
+    public String getNombreClinica() {
+        return nombreClinica;
+    }
+
+    public void setNombreClinica(String nombreClinica) {
+        this.nombreClinica = nombreClinica;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
